@@ -87,7 +87,7 @@ begin
 				current_state <= WAITING;
 				total <= (others => '0');
 				debounce_cnt <= (others => '0');
-			else
+			elsif rising_edge(MAX10_CLK2_50) then
 				current_state <= next_state;
 				total <= next_total;
 				debounce_cnt <= next_debounce_cnt;
